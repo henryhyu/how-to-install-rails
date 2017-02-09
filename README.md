@@ -30,8 +30,18 @@ rbenv install 2.4.0
 rbenv global 2.4.0
 ruby -v
 ```
+3. Install Rails (version 5.0.1 as of February 8, 2017)
 
-End with an example of getting some data out of the system or using it for a little demo
+```
+gem install rails -v 5.0.1
+
+```
+The above code will most likely reach an error trying to install nokogiri
+
+```
+gem install nokogiri -- --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2/
+
+```
 
 ## Running the tests
 
