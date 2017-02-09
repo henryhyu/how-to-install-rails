@@ -1,16 +1,16 @@
 # How to Install Rails on Mac
 
-Installing Rails can be a headache. Here's a step by step guide on how I managed to do it successfully on my laptop. I use a Macbook Pro 2014 running Mac OS Sierra 10.12.3.
+Installing Rails can be a headache. Here's a step by step guide on how I managed to do it successfully on my laptop. I use a Macbook Pro 2014 running Mac OS Sierra 10.12.3. I am assuming you already have git configured on your system.
 
 ## Installing
 
-1. Install Homebrew
+### Install Homebrew
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-2. Install Ruby (version 2.4.0 as of Feburary 8, 2017)
+### Install Ruby (version 2.4.0 as of Feburary 8, 2017)
 
 ```
 brew install rbenv ruby-build
@@ -23,7 +23,7 @@ rbenv install 2.4.0
 rbenv global 2.4.0
 ruby -v
 ```
-3. Install Rails (version 5.0.1 as of February 8, 2017)
+### Install Rails (version 5.0.1 as of February 8, 2017)
 
 ```
 gem install rails -v 5.0.1
@@ -46,7 +46,7 @@ Verify that Rails has been installed by checking the version:
 rails -v
 ```
 
-4. Install Database
+### Install Database
 
 You can choose between SQLite, MySQL, or PostgreSQL
 
@@ -56,7 +56,7 @@ brew install postgresql
 brew install mysql
 ```
 
-5. Running Rails
+### Running Rails
 
 ```
 rails new myapp
