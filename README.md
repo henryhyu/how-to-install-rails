@@ -1,14 +1,8 @@
 # How to Install Rails on Mac
 
-Installing Rails can be a headache. Here's a step by step guide on how I managed to do it successfully on my laptop. I use a Macbook Pro running Mac OS Sierra 10.12.3.
+Installing Rails can be a headache. Here's a step by step guide on how I managed to do it successfully on my laptop. I use a Macbook Pro 2014 running Mac OS Sierra 10.12.3.
 
-## Getting Started
-
-```
-Give examples
-```
-
-### Installing
+## Installing
 
 1. Install Homebrew
 
