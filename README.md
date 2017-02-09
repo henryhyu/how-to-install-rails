@@ -25,7 +25,6 @@ brew install rbenv ruby-build
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 source ~/.bash_profile
 
-# Install Ruby
 rbenv install 2.4.0
 rbenv global 2.4.0
 ruby -v
@@ -34,65 +33,41 @@ ruby -v
 
 ```
 gem install rails -v 5.0.1
-
 ```
-The above code will most likely reach an error trying to install nokogiri
+The above code will most likely reach an error trying to install nokogiri. Run the following to fix it.
 
 ```
 gem install nokogiri -- --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2/
-
 ```
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Attempt to install Rails again, this time hopefully errorless. Rails is now installed, but in order for us to use the Rails executable, we need to tell rbenv to see it:
 
 ```
-Give an example
+rbenv rehash
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+Verify that Rails has been installed by checking the version:
 
 ```
-Give an example
+rails -v
 ```
 
-## Deployment
+4. Install Database
 
-Add additional notes about how to deploy this on a live system
+You can choose between SQLite, MySQL, or PostgreSQL
 
-## Built With
+```
+brew install sqlite3
+brew install postgresql
+brew install mysql
+```
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+5. Running Rails
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+```
+rails new myapp
+cd myapp
+rake db:create
+rails server
+```
+Check if your website is running successfully on Rails by visiting http://localhost:3000.
