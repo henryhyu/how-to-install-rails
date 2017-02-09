@@ -3,10 +3,12 @@ Installing Rails on Mac OS Sierra 10.12.3
 
 Installing Rails can be a pain in the butt. Here's a step by step guide on how I managed to do it successfully on my laptop. I use a Macbook Pro running Mac OS Sierra 10.12.3.
 
-Install Homebrew
-Install Ruby
-Configure Git
-Install Rails
+1. Install Homebrew
+
+2. Install Ruby
+
+3. Configure Git \n
+4. Install Rails
 Install Database
 Final Steps
 https://gorails.com/setup/osx/10.12-sierra
